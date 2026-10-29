@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover People | RecipeHub</title>
+  <link rel="stylesheet" href="discover.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="home.html" class="brand">RecipeHub</a>
+
+    <nav>
+      <a href="home.html">Discover Recipes</a>
+      <a href="my-recipes.html">My Recipes</a>
+      <a href="collections.html">Collections</a>
+      <a href="profile.html">My Profile</a>
+      <a href="discover.html" class="active">People</a>
+      <a href="feed.html">Activity Feed</a>
+    </nav>
+  </header>
+
+  <main class="page-container">
+    <section class="page-heading">
+      <div>
+        <p class="eyebrow">YOUR FOOD COMMUNITY</p>
+        <h1>Discover People</h1>
+        <p>Find cooks, follow their profiles, and discover their latest recipes.</p>
+      </div>
+
+      <div class="community-stats">
+        <span id="peopleCount">0</span>
+        <span>people to discover</span>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <label for="searchUsers">Search people</label>
+      <input
+        type="search"
+        id="searchUsers"
+        placeholder="Search by name or email..."
+      >
+    </section>
+
+    <p id="pageMessage" role="status" aria-live="polite"></p>
+
+    <section id="usersGrid" class="users-grid">
+      <p>Loading people...</p>
+    </section>
+  </main>
+
+  <script src="discover.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f8fc;
+  color: #25283a;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 18px 6%;
+  background: white;
+  border-bottom: 1px solid #e6e8ef;
+}
+
+.brand {
+  color: #5b4bdb;
+  font-size: 24px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+
+nav a {
+  color: #666b7c;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a.active,
+nav a:hover {
+  color: #5b4bdb;
+  font-weight: 700;
+}
+
+.feed-container {
+  max-width: 760px;
+  margin: 38px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 34px;
+}
+
+.subtitle {
+  margin-bottom: 28px;
+  color: #777c8d;
+  line-height: 1.6;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.activity-card {
+  padding: 22px;
+  background: white;
+  border: 1px solid #e6e8ef;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px #25254a08;
+}
+
+.activity-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ebe8ff;
+  color: #5948d6;
+  font-weight: 800;
+}
+
+.activity-user {
+  margin: 0 0 5px;
+  font-size: 15px;
+}
+
+.activity-time {
+  color: #888c9a;
+  font-size: 12px;
+}
+
+.activity-type {
+  margin: 0 0 12px;
+  color: #5b4bdb;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.activity-card h2 {
+  margin: 0 0 10px;
+  font-size: 21px;
+}
+
+.activity-description {
+  color: #686d7e;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.recipe-image {
+  width: 100%;
+  max-height: 300px;
+  margin: 10px 0 15px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.rating {
+  color: #b7790a;
+  font-weight: 700;
+}
+
+.recipe-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #5b4bdb;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.recipe-link:hover {
+  text-decoration: underline;
+}
+
+.empty-state {
+  padding: 28px;
+  background: white;
+  border: 1px solid #e6e8ef;
+  border-radius: 14px;
+  color: #74798a;
+  line-height: 1.7;
+}
+
+.discover-prompt {
+  margin-top: 25px;
+  color: #74798a;
+  font-size: 14px;
+}
+
+.discover-prompt a {
+  color: #5b4bdb;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    padding: 16px 20px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .activity-card {
+    padding: 17px;
+  }
+}

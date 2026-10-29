@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Recipe | RecipeHub</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="create-recipe.css">
+    <link rel="stylesheet" href="edit-recipe.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="edit-recipe.js" defer></script>
+</head>
+<body>
+    <header class="details-header">
+        <a id="backToRecipe" href="home.html" class="back-link">
+            ← Back to Recipe
+        </a>
+        <h2>RecipeHub</h2>
+    </header>
+
+    <main class="edit-container">
+        <h1>Edit Recipe</h1>
+        <p>Update your recipe details, ingredients, and instructions.</p>
+
+        <div id="loadingMessage">Loading recipe...</div>
+        <div id="formMessage" class="d-none" role="alert"></div>
+
+        <form id="editRecipeForm" class="d-none">
+            <label for="title">Recipe title</label>
+            <input id="title" name="title" required maxlength="255">
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="imageURL">Image URL</label>
+            <input id="imageURL" name="imageURL" type="url"
+                   placeholder="https://example.com/recipe.jpg">
+
+            <label for="category">Category</label>
+            <input id="category" name="category" required>
+
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty" name="difficulty" required>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+
+            <label for="prepTimeMinutes">Preparation time (minutes)</label>
+            <input id="prepTimeMinutes" name="prepTimeMinutes"
+                   type="number" min="0" required>
+
+            <label for="cookTimeMinutes">Cooking time (minutes)</label>
+            <input id="cookTimeMinutes" name="cookTimeMinutes"
+                   type="number" min="0" required>
+
+            <label for="servings">Servings</label>
+            <input id="servings" name="servings"
+                   type="number" min="1" required>
+
+            <h2>Ingredients</h2>
+            <div id="ingredientsList"></div>
+            <button type="button" id="addIngredient">+ Add ingredient</button>
+
+            <h2>Instructions</h2>
+            <div id="instructionsList"></div>
+            <button type="button" id="addInstruction">+ Add step</button>
+
+            <div class="edit-actions">
+                <button type="submit" id="saveRecipeBtn">Save Changes</button>
+                <a id="cancelEdit" href="home.html">Cancel</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

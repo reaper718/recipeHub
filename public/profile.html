@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | RecipeHub</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header class="topbar">
+        <a href="home.html" class="brand">RecipeHub</a>
+
+        <nav>
+            <a href="home.html">Discover</a>
+            <a href="my-recipes.html">My Recipes</a>
+            <a href="collections.html">Collections</a>
+            <a href="profile.html" class="active">My Profile</a>
+        </nav>
+
+        <button id="logoutBtn" class="secondary-btn">Log out</button>
+    </header>
+
+    <main class="container">
+        <section class="profile-hero">
+            <div class="avatar" id="profileAvatar">U</div>
+            <div>
+                <p class="eyebrow">YOUR RECIPEHUB ACCOUNT</p>
+                <h1 id="headingName">My Profile</h1>
+                <p id="headingEmail">Loading profile...</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Profile information</h2>
+
+            <form id="profileForm">
+                <label for="profileName">Full name</label>
+                <input id="profileName" name="name"
+                       type="text" maxlength="100" required>
+
+                <label for="profileEmail">Email address</label>
+                <input id="profileEmail" name="email"
+                       type="email" readonly>
+
+                <label for="profilePhone">Phone number</label>
+                <input id="profilePhone" name="phone"
+                       type="tel" maxlength="20">
+
+                <button type="submit" id="saveProfileBtn" class="primary-btn">
+                    Save changes
+                </button>
+
+                <p id="profileMessage" role="status"></p>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>My activity</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span id="myRecipeCount">—</span>
+                    <p>Recipes created</p>
+                </div>
+                <div class="stat-card">
+                    <span id="favoriteCount">—</span>
+                    <p>Favorite recipes</p>
+                </div>
+                <div class="stat-card">
+                    <span id="reviewCount">—</span>
+                    <p>Reviews written</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <h2>My recipes</h2>
+                <a href="my-recipes.html">Manage recipes</a>
+            </div>
+            <div id="myRecipesGrid" class="cards-grid">
+                <p>Loading recipes...</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <h2>My favorites</h2>
+                <a href="home.html#favorites">Explore recipes</a>
+            </div>
+            <div id="favoritesGrid" class="cards-grid">
+                <p>Loading favorites...</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>My reviews</h2>
+            <div id="reviewsList" class="reviews-list">
+                <p>Loading reviews...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="profile.js" defer></script>
+</body>
+</html>

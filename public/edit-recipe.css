@@ -1,0 +1,111 @@
+
+.edit-container {
+    max-width: 800px;
+    margin: 35px auto;
+    padding: 0 20px 40px;
+}
+
+#editRecipeForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+#editRecipeForm input,
+#editRecipeForm textarea,
+#editRecipeForm select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font: inherit;
+}
+
+#editRecipeForm textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+#editRecipeForm h2 {
+    margin: 25px 0 5px;
+}
+
+.ingredient-row,
+.instruction-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.instruction-row {
+    grid-template-columns: 1fr auto;
+}
+
+#addIngredient,
+#addInstruction,
+.remove-row {
+    padding: 9px 12px;
+    cursor: pointer;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: white;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 25px;
+}
+
+#saveRecipeBtn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#saveRecipeBtn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#cancelEdit {
+    padding: 10px;
+}
+
+#formMessage {
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#formMessage.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+#formMessage.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.d-none {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .ingredient-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .instruction-row {
+        grid-template-columns: 1fr auto;
+    }
+}

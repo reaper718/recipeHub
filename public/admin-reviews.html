@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Reviews | RecipeHub Admin</title>
+    <link rel="stylesheet" href="admin-reviews.css">
+</head>
+<body>
+    <header class="topbar">
+        <a href="home.html" class="brand">RecipeHub</a>
+        <nav>
+            <a href="admin.html">Dashboard</a>
+            <a href="admin-users.html">Users</a>
+            <a href="admin-recipes.html">Recipes</a>
+            <a href="admin-reviews.html" class="active">Reviews</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-heading">
+            <div>
+                <p class="eyebrow">CONTENT MODERATION</p>
+                <h1>Manage Reviews</h1>
+                <p>Review ratings and comments submitted by your community.</p>
+            </div>
+
+            <div class="total-card">
+                <span>Reviews displayed</span>
+                <strong id="reviewCount">—</strong>
+            </div>
+        </section>
+
+        <section class="toolbar">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search review, recipe, or reviewer..."
+                aria-label="Search reviews"
+            >
+            <button id="searchBtn" type="button">Search</button>
+            <button id="refreshBtn" type="button" class="secondary">Refresh</button>
+        </section>
+
+        <p id="pageMessage" role="status" aria-live="polite"></p>
+
+        <section id="reviewsList" class="reviews-list">
+            <p>Loading reviews...</p>
+        </section>
+
+        <p class="back-link">
+            <a href="admin.html">← Back to Admin Dashboard</a>
+        </p>
+    </main>
+
+    <script src="admin-reviews.js"></script>
+</body>
+</html>

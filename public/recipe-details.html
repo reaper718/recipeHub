@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Details | RecipeHub</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="recipe-details.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="recipe-details.js" defer></script>
+</head>
+<body>
+    <header class="details-header">
+        <a href="home.html" class="back-link">← Back to Recipes</a>
+        <h2>RecipeHub</h2>
+        <button
+            id="editRecipeBtn"
+            type="button"
+            class="edit-recipe-btn"
+            hidden
+        >
+            ✏️ Edit Recipe
+        </button>
+        <button
+            id="deleteRecipeBtn"
+            type="button"
+            class="delete-recipe-btn"
+            hidden
+        >
+            🗑️ Delete Recipe
+        </button>
+    </header>
+
+    <main class="details-container">
+        <div id="loadingMessage">Loading recipe...</div>
+        <div id="errorMessage" class="d-none"></div>
+
+        <article id="recipeDetails" class="d-none">
+            <img id="recipeImage" class="details-image" alt="">
+
+            <div class="details-content">
+                <span id="recipeCategory" class="details-category"></span>
+                <h1 id="recipeTitle"></h1>
+                <p id="recipeDescription"></p>
+
+                <div class="details-stats">
+                    <span>⏱ <strong id="recipeTime"></strong> min</span>
+                    <span>🍽 <strong id="recipeServings"></strong> servings</span>
+                    <span>Difficulty: <strong id="recipeDifficulty"></strong></span>
+                </div>
+
+                <section>
+                    <h2>Ingredients</h2>
+                    <ul id="ingredientsList"></ul>
+                </section>
+
+                <section>
+                    <h2>Instructions</h2>
+                    <ol id="instructionsList"></ol>
+                </section>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

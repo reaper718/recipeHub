@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Feed | RecipeHub</title>
+  <link rel="stylesheet" href="feed.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="home.html" class="brand">RecipeHub</a>
+    <nav>
+      <a href="home.html">Recipes</a>
+      <a href="discover.html">People</a>
+      <a href="my-recipes.html">My Recipes</a>
+      <a href="collections.html">Collections</a>
+      <a href="profile.html">My Profile</a>
+      <a href="feed.html" class="active">Activity Feed</a>
+    </nav>
+  </header>
+
+  <main class="feed-container">
+    <h1>Activity Feed</h1>
+    <p class="subtitle">See what the people you follow are cooking and reviewing.</p>
+
+    <p id="feedMessage" role="status" aria-live="polite">Loading activity...</p>
+    <section id="activityList" class="activity-list"></section>
+
+    <p class="discover-prompt">
+      Looking for more inspiration?
+      <a href="discover.html">Discover people to follow</a>
+    </p>
+  </main>
+
+  <script src="feed.js"></script>
+</body>
+</html>

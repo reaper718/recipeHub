@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | RecipeHub</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header class="topbar">
+        <a href="home.html" class="brand">RecipeHub</a>
+        <nav>
+            <a href="home.html">Recipes</a>
+            <a href="discover.html">People</a>
+            <a href="feed.html">Activity Feed</a>
+            <a href="admin.html" class="active">Admin Dashboard</a>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+        <section class="welcome">
+            <p class="eyebrow">RECIPEHUB ADMINISTRATION</p>
+            <h1>Admin Dashboard</h1>
+            <p>Monitor your community and manage its content.</p>
+        </section>
+
+        <p id="pageMessage" role="status" aria-live="polite">Loading dashboard...</p>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <span class="stat-icon">👥</span>
+                <p>Total Users</p>
+                <h2 id="totalUsers">—</h2>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">🍲</span>
+                <p>Total Recipes</p>
+                <h2 id="totalRecipes">—</h2>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">⭐</span>
+                <p>Total Reviews</p>
+                <h2 id="totalReviews">—</h2>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">🚩</span>
+                <p>Total Reports</p>
+                <h2 id="totalReports">—</h2>
+            </article>
+        </section>
+
+        <section class="management-section">
+            <h2>Management</h2>
+            <div class="management-grid">
+                <a href="admin-users.html" class="management-card">
+                    <span>👥</span>
+                    <h3>Manage Users</h3>
+                    <p>View registered accounts and manage access.</p>
+                </a>
+
+                <a href="admin-recipes.html" class="management-card">
+                    <span>🍲</span>
+                    <h3>Manage Recipes</h3>
+                    <p>Review recipes and moderate inappropriate content.</p>
+                </a>
+
+                <a href="admin-reviews.html" class="management-card">
+                    <span>⭐</span>
+                    <h3>Manage Reviews</h3>
+                    <p>Review ratings and remove abusive reviews.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

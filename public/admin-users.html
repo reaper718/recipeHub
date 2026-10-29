@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users | RecipeHub Admin</title>
+    <link rel="stylesheet" href="admin-users.css">
+</head>
+<body>
+    <header class="topbar">
+        <a href="home.html" class="brand">RecipeHub</a>
+        <nav>
+            <a href="admin.html">Dashboard</a>
+            <a href="admin-users.html" class="active">Manage Users</a>
+            <a href="home.html">Recipes</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-heading">
+            <div>
+                <p class="eyebrow">ADMINISTRATION</p>
+                <h1>Manage Users</h1>
+                <p>View registered users and manage their accounts.</p>
+            </div>
+            <div class="total-card">
+                <span>Total users</span>
+                <strong id="userCount">—</strong>
+            </div>
+        </section>
+
+        <section class="toolbar">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search by name or email..."
+                aria-label="Search users"
+            >
+            <button id="searchBtn" type="button">Search</button>
+            <button id="refreshBtn" type="button" class="secondary">Refresh</button>
+        </section>
+
+        <p id="pageMessage" role="status" aria-live="polite"></p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>User</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Registered</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTableBody">
+                    <tr>
+                        <td colspan="6">Loading users...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="back-link">
+            <a href="admin.html">← Back to Admin Dashboard</a>
+        </p>
+    </main>
+
+    <script src="admin-users.js"></script>
+</body>
+</html>

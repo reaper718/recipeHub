@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+</head>
+<body class="bg-light">
+
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
+
+            <h2 class="text-center mb-4">Login</h2>
+
+            <form onsubmit="handleLogin(event)" id = "loginForm">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    Login
+                </button>
+
+                <p class="text-center mt-3 mb-2">
+                    <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+                </p>
+
+                <p class="text-center mb-0">
+                    Don't have an account?
+                    <a href="signup.html">Sign Up</a>
+                </p>
+            </form>
+
+            <!-- Forgot password form, hidden initially -->
+            <form id="forgotPasswordForm" class="mt-3 d-none">
+                <h5 class="text-center">Reset Password</h5>
+
+                <div class="mb-3">
+                    <label for="forgotEmail" class="form-label">
+                        Enter your email address
+                    </label>
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="forgotEmail"
+                        placeholder="Enter your registered email"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn btn-success w-100">
+                    Submit
+                </button>
+
+                <button
+                    type="button"
+                    id="backToLogin"
+                    class="btn btn-link w-100 mt-2"
+                >
+                    Back to Login
+                </button>
+
+                <p id="forgotMessage" class="small text-center mt-2 mb-0"></p>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

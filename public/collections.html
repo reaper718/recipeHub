@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Collections | RecipeHub</title>
+    <link rel="stylesheet" href="collections.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="home.html" class="brand">RecipeHub</a>
+
+        <nav>
+            <a href="home.html">Explore Recipes</a>
+            <a href="my-recipes.html">My Recipes</a>
+            <a href="collections.html" class="active">Collections</a>
+        </nav>
+
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+
+    <main class="container">
+        <section class="page-heading">
+            <div>
+                <p class="eyebrow">YOUR PERSONAL RECIPE BOOK</p>
+                <h1>My Collections</h1>
+                <p>Organize your favorite cooking ideas in one place.</p>
+            </div>
+        </section>
+
+        <section class="create-section">
+            <h2>Create a collection</h2>
+
+            <form id="collectionForm">
+                <div class="form-group">
+                    <label for="collectionName">Collection name</label>
+                    <input
+                        type="text"
+                        id="collectionName"
+                        maxlength="100"
+                        placeholder="e.g. Breakfast Ideas"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="collectionDescription">Description</label>
+                    <textarea
+                        id="collectionDescription"
+                        rows="3"
+                        placeholder="What recipes will you save here?"
+                    ></textarea>
+                </div>
+
+                <button type="submit" id="createBtn" class="primary-btn">
+                    + Create Collection
+                </button>
+            </form>
+
+            <p id="formMessage" class="message" role="status"></p>
+        </section>
+
+        <section class="collections-section">
+            <div class="section-heading">
+                <h2>Your collections</h2>
+                <button id="refreshBtn" class="secondary-btn">
+                    Refresh
+                </button>
+            </div>
+
+            <div id="collectionsGrid" class="collections-grid">
+                <p class="empty-state">Loading collections...</p>
+            </div>
+        </section>
+
+        <section id="collectionDetails" class="details-section" hidden>
+            <div class="section-heading details-heading">
+                <div>
+                    <p class="eyebrow">COLLECTION DETAILS</p>
+                    <h2 id="selectedCollectionName"></h2>
+                    <p id="selectedCollectionDescription"></p>
+                </div>
+
+                <button id="closeDetailsBtn" class="secondary-btn">
+                    Close
+                </button>
+            </div>
+
+            <form id="addRecipeForm" class="add-recipe-form">
+                <div class="form-group">
+                    <label for="recipeSelect">Choose a recipe</label>
+                    <select id="recipeSelect" required>
+                        <option value="">Select a recipe</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    + Add Recipe
+                </button>
+            </form>
+
+            <p id="detailsMessage" class="message" role="status"></p>
+
+            <div id="collectionRecipes" class="recipes-grid"></div>
+        </section>
+
+        <p id="pageMessage" class="message" role="status"></p>
+    </main>
+
+    <script src="collections.js"></script>
+</body>
+</html>

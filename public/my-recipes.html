@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Recipes | RecipeHub</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="my-recipes.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="my-recipes.js" defer></script>
+</head>
+<body>
+    <header class="details-header">
+        <a href="home.html" class="back-link">
+            ← Back to Dashboard
+        </a>
+        <h2>RecipeHub</h2>
+    </header>
+
+    <main class="my-recipes-container">
+        <div class="my-recipes-heading">
+            <div>
+                <h1>My Recipes</h1>
+                <p>Your personal collection of recipes.</p>
+            </div>
+
+            <a href="create-recipe.html" class="create-recipe-link">
+                + Create Recipe
+            </a>
+        </div>
+
+        <p id="recipeCount">Loading your recipes...</p>
+
+        <div id="errorMessage" class="d-none" role="alert"></div>
+
+        <div id="myRecipesGrid" class="my-recipes-grid"></div>
+
+        <div id="emptyState" class="d-none">
+            <h2>No recipes yet</h2>
+            <p>Recipes you create will appear here.</p>
+            <a href="create-recipe.html">Create your first recipe</a>
+        </div>
+    </main>
+</body>
+</html>
